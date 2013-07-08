@@ -1,5 +1,6 @@
 ---
 title: Moq
+layout: index
 ---
 #Moq
 Welcome to moq's new site!
