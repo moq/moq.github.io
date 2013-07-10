@@ -1,0 +1,48 @@
+﻿---
+title: Posts
+---
+
+<html>
+<head>
+    <link id="twitter-widget-css" rel="stylesheet" type="text/css" href="https://platform.twitter.com/embed/timeline.97ea650dd75d8c1ac0e2c6b4918203b5.default.css">
+    <base target="_blank">
+    <style type="text/css">
+        body {
+            display: none;
+        }
+    </style>
+    <style id="twitter-widget-0-styles" type="text/css">
+        .thm-dark .customisable, .thm-dark .customisable:link, .thm-dark .customisable:visited, .thm-dark .customisable:hover, .thm-dark .customisable:focus, .thm-dark .customisable:active, .thm-dark .customisable-highlight:hover, .thm-dark .customisable-highlight:focus, .thm-dark a:hover .customisable-highlight, .thm-dark a:focus .customisable-highlight {
+            color: #FFCC00;
+        }
+
+        .thm-dark a:hover .ic-mask, .thm-dark a:focus .ic-mask {
+            background-color: #FFCC00;
+        }
+    </style>
+</head>
+<body>
+    <div class="root timeline ltr customisable-border twitter-timeline var-narrow is-touch twitter-timeline-rendered thm-dark var-narrow" 
+        dir="ltr">
+        <div class="timeline-header customisable-border">
+            <h1 class="summary">Posts
+            </h1>
+        </div>
+        <div class="stream" style="height: 463px;">
+            <ol class="h-feed">
+                {% for post in site.posts %}
+                <li class="tweet h-entry customisable-border">
+                    <time class="permalink dt-updated">{{ post.date | date: "%B %e, %Y" }}</time>
+                    <div class="h-card p-author">
+                        <a class="link customisable" style="cursor: hand;" href="{{ post.url }}"><span>{{ post.title }}</span></a>
+                    </div>
+                    <div class="e-entry-content">
+                        <p class="e-entry-title">{{ page.excerpt | markdownify }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
