@@ -1,4 +1,4 @@
 auto: true
-markdown: redcarpet
+markdown: kramdown
 permalink: none
 url: http://www.moqthis.com
